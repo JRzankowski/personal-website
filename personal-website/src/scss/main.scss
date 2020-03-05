@@ -1,0 +1,21 @@
+@import 'settings/fonts';
+@import 'settings/colors';
+@import 'header.scss';
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+}
+body{
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: $font-base;
+}
+
+.personal-website{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
