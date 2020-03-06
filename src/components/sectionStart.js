@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
-import {IoLogoGithub, IoLogoLinkedin} from 'react-icons/io'
 
 export default class SectionStart extends Component {
-    state = {};
-
-
     render() {
         return (
             <section className="start">
