@@ -1,6 +1,7 @@
 @import 'settings/fonts';
 @import 'settings/colors';
 @import 'header.scss';
+@import 'sectionStart.scss';
 #root {
   min-height: 100vh;
   display: grid;
@@ -19,5 +20,13 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  .main{
+    max-width: 1600px;
+    padding: 0 25px;
+    margin: 0 auto;
+    @media ( min-width: 770px){
+     padding: 0 100px;
+    }
+  }
 }
 

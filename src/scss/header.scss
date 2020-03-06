@@ -1,11 +1,10 @@
 .header {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 75px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   background-color: $color-background;
@@ -70,7 +69,6 @@
           margin-right: 6px;
         }
       }
-
     }
 
     &__container--default-menu {
@@ -128,7 +126,6 @@
             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
           }
         }
-
       }
     }
 
@@ -142,7 +139,6 @@
       line-height: 1.2;
       letter-spacing: 1px;
       font-size: 1.8em;
-
     }
 
     &__burger {

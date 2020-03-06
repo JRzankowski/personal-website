@@ -1,45 +1,43 @@
 import React, {Component} from 'react';
 import {IoLogoGithub, IoLogoLinkedin} from 'react-icons/io'
 
-
 export default class Header extends Component {
-    state={
-      prevScrollPos: window.pageYOffset,
-      visible: true
+    state = {
+        prevScrollPos: window.pageYOffset,
+        visible: true
     };
+
     componentDidMount() {
-        window.addEventListener('scroll',this.handleScroll);
+        window.addEventListener('scroll', this.handleScroll);
     }
+
     componentWillUnmount() {
-        window.removeEventListener('scroll',this.handleScroll);
+        window.removeEventListener('scroll', this.handleScroll);
     }
 
     handleBurger = () => {
-        if(document.querySelector('.mobile-menu').classList.contains('active')){
+        if (document.querySelector('.mobile-menu').classList.contains('active')) {
             document.querySelector('.nav__burger').firstElementChild.classList.remove('active');
             document.querySelector('.mobile-menu').classList.remove('active');
-        }else{
+        } else {
             document.querySelector('.nav__burger').firstElementChild.classList.add('active');
             document.querySelector('.mobile-menu').classList.add('active');
         }
-
-
     };
     handleScroll = () => {
-        const { prevScrollPos } = this.state;
+        const {prevScrollPos} = this.state;
         const currentScrollPos = window.pageYOffset;
         const visible = prevScrollPos > currentScrollPos;
         this.setState({
             prevScrollPos: currentScrollPos,
             visible
         });
-        if(currentScrollPos>100){
+        if (currentScrollPos > 100) {
             document.querySelector('.header').classList.add('smaller')
-        }else{
+        } else {
             document.querySelector('.header').classList.remove('smaller')
         }
     };
-
 
     render() {
         return (
@@ -51,7 +49,7 @@ export default class Header extends Component {
 
                         </a>
                     </div>
-                    <div className="nav__container nav__container--burger-menu" >
+                    <div className="nav__container nav__container--burger-menu">
                         <div onClick={this.handleBurger} className="nav__burger">
                             <div className="nav__burger--line"/>
                         </div>
