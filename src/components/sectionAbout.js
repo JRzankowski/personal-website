@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import myPhoto from '../assets/photo.png'
-import {FaRegDotCircle} from 'react-icons/fa'
+
 
 export default class SectionAbout extends Component {
     render() {
@@ -19,13 +19,12 @@ export default class SectionAbout extends Component {
                                 target="_blank" href='https://coderslab.pl'>Coders Lab</a>. After several hundred hours
                                 of my own work and a completed course, I decided to look for a job as a junior front-end
                                 developer.</p>
-                            <p className="content__text">Here are a few technologies I've been working with
-                                recently:</p>
+                            <p className="content__text">Here are a few technologies technologies that I use and keep learning:</p>
                             <ul className="content__skills">
                                 <li className="content__skills-skill">HTML & (S)CSS</li>
                                 <li className="content__skills-skill">JavaScirpt (ES6+)</li>
                                 <li className="content__skills-skill">React</li>
-                                <li className="content__skills-skill">TypeScript</li>
+                                <li className="content__skills-skill">Basics of TypeScript</li>
                             </ul>
                         </div>
                     </div>

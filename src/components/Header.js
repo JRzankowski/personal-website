@@ -64,7 +64,7 @@ export default class Header extends Component {
                                     <a className="menu__item--link">About</a>
                                 </li>
                                 <li className="menu__item">
-                                    <a className="menu__item--link">Work</a>
+                                    <a className="menu__item--link">Projects</a>
                                 </li>
                                 <li className="menu__item">
                                     <a className="menu__item--link">Contact</a>

@@ -1,8 +1,10 @@
 @import 'settings/fonts';
 @import 'settings/colors';
+@import 'mixins';
 @import 'header.scss';
 @import 'sectionStart.scss';
 @import 'sectionAbout.scss';
+@import 'sectionWork.scss';
 #root {
   min-height: 100vh;
   display: grid;

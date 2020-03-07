@@ -1,0 +1,189 @@
+.work {
+  max-width: 1000px;
+  margin: 100px auto 0;
+  padding: 150px 0;
+
+
+  &__heading {
+    @include section-heading(before);
+  }
+
+  &__container:nth-of-type(2n) {
+    .project-box {
+      &__container {
+        @media(min-width: 600px) {
+          order: 2;
+          text-align: right;
+        }
+      }
+
+      &__img {
+        @media(min-width: 600px) {
+          left: 85px;
+        }
+      }
+
+      &__technologies, &__links {
+        justify-content: flex-end;
+      }
+
+    }
+  }
+
+  &__container {
+    position: relative;
+    margin-bottom: 100px;
+
+    .project-box {
+      position: relative;
+      background-size: cover;
+      border-radius: 3px;
+      background-position-y: 12px;
+      @media(min-width: 600px) {
+        display: flex;
+        background: transparent !important;
+      }
+
+      &__mask {
+        background: linear-gradient(
+                        rgba(#44413d, .9),
+                        rgba(#2a2a2a, 0.8) 100%,
+                        rgba(#564e47, 0.7)
+        );
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        @media(min-width: 600px) {
+          background: transparent !important;
+        }
+      }
+
+      &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        padding: 30px 25px 20px;
+        @media(min-width: 480px) {
+          padding: 40px 60px 30px;
+        }
+        @media(min-width: 600px) {
+          width: 50%;
+        }
+      }
+
+      &__img {
+        display: none;
+        width: 50%;
+        background-color: #414141;
+        @media(min-width: 600px) {
+          background-size: cover;
+          display: block;
+          position: relative;
+          z-index: 8;
+          left: -85px;
+          box-shadow: rgba(2, 12, 27, 0.7) 0 20px 30px -15px;
+          &--mask {
+            z-index: 7;
+            background: rgba(#e9e0d1, 0.2);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            transition: .2s;
+          }
+          &:hover &--mask {
+            background: none;
+          }
+        }
+      }
+
+      &__heading {
+        font-size: 1.9em;
+        margin: 0;
+
+        a {
+          cursor: pointer;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 600;
+          letter-spacing: 1px;
+          @media(min-width: 600px) {
+            color: $color-font-highlighted;
+          }
+        }
+      }
+
+      &__description {
+        @media(min-width: 600px) {
+          padding: 20px;
+          background-color: #cbc2b3;
+          box-shadow: rgba(2, 12, 27, 0.7) 0 10px 30px -15px;
+          margin: 20px 0;
+          position: relative;
+          z-index: 9;
+
+        }
+
+        &--text {
+          font-size: 1em;
+          color: #bfbfbf;
+          line-height: 1.4;
+          @media(min-width: 600px) {
+            font-weight: 400;
+            color: #575347;
+            margin: 0;
+          }
+        }
+      }
+
+      &__technologies {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        list-style: none;
+
+        &--item {
+          color: white;
+          font-weight: 400;
+          margin-right: 8px;
+          font-size: .8em;
+          @media(min-width: 600px) {
+            color: #5f5b4a;
+            font-weight: 500;
+          }
+        }
+      }
+
+      &__links {
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: $color-background;
+        z-index: 22;
+        @media(min-width: 600px) {
+          color: $color-font-base;
+        }
+
+        &--link {
+          font-size: 2rem;
+          margin-right: 15px;
+          cursor: pointer;
+          z-index: 22;
+          transition: .1s;
+
+          &:hover {
+            color: white;
+            @media(min-width: 600px) {
+              color: $color-font-highlighted;
+            }
+          }
+        }
+      }
+    }
+  }
+}

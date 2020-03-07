@@ -1,0 +1,25 @@
+@mixin section-heading($pseudo-element-type) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  margin: 10px 0 40px;
+  font-size: 1.7rem;
+  color: $color-font-base;
+
+
+  &::#{$pseudo-element-type} {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #b7ae9f;
+    top: 50%;
+    @if $pseudo-element-type == after {
+      margin-left: 10px;
+    } @else {
+      margin-right: 10px;
+    }
+
+  }
+}

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from "./Header";
 import SectionStart from "./sectionStart";
 import SectionAbout from "./sectionAbout";
+import SectionWork from "./sectionWork";
 
 export default class PersonalWebsite extends Component {
     render() {
@@ -11,6 +12,7 @@ export default class PersonalWebsite extends Component {
                     <main className='main'>
                         <SectionStart/>
                         <SectionAbout/>
+                        <SectionWork/>
                     </main>
             </div>
         );
