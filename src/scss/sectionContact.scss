@@ -1,0 +1,38 @@
+.contact{
+  text-align: center;
+  max-width: 600px;
+  padding: 50px 0 200px;
+  margin: 0 auto;
+  &__heading {
+    @include section-heading(after);
+  }
+  &__container{
+
+  }
+  &__content{
+    margin-top: 50px;
+  }
+  &__text{
+    line-height: 1.3;
+    color: $color-font-base;
+    font-weight: 500;
+    @media (min-width: 375px) {
+      font-size: 1rem;
+    }
+    @media (min-width: 770px) {
+      font-size: 1.2rem;
+    }
+    @media (min-width: 1000px) {
+      font-size: 1.3rem;
+    }
+    a {
+      color: #575757;
+      text-decoration: none;
+    }
+  }
+  &__btn{
+    @include contact-btn;
+    margin: 50px auto 0;
+  }
+
+}

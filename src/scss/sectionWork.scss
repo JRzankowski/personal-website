@@ -80,6 +80,8 @@
         background-color: #414141;
         @media(min-width: 600px) {
           background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
           display: block;
           position: relative;
           z-index: 8;
@@ -87,7 +89,7 @@
           box-shadow: rgba(2, 12, 27, 0.7) 0 20px 30px -15px;
           &--mask {
             z-index: 7;
-            background: rgba(#e9e0d1, 0.2);
+            background: rgba(#e9e0d1, 0.4);
             position: absolute;
             left: 0;
             top: 0;
@@ -175,6 +177,7 @@
           cursor: pointer;
           z-index: 22;
           transition: .1s;
+          color: $color-font-base;
 
           &:hover {
             color: white;

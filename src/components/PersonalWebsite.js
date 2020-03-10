@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import Fade from 'react-reveal/Fade';
 import Header from "./Header";
 import SectionStart from "./sectionStart";
 import SectionAbout from "./sectionAbout";
 import SectionWork from "./sectionWork";
+import SectionContact from "./sectionContact";
+import Footer from "./footer";
 
 export default class PersonalWebsite extends Component {
     render() {
@@ -13,6 +16,8 @@ export default class PersonalWebsite extends Component {
                         <SectionStart/>
                         <SectionAbout/>
                         <SectionWork/>
+                        <SectionContact/>
+                        <Footer/>
                     </main>
             </div>
         );

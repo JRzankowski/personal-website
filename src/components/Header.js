@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {IoLogoGithub, IoLogoLinkedin} from 'react-icons/io'
+import {IoLogoGithub, IoLogoLinkedin} from 'react-icons/io';
+import {Link, animateScroll as scroll} from 'react-scroll'
+import Fade from 'react-reveal/Fade';
 
 export default class Header extends Component {
     state = {
@@ -19,15 +21,33 @@ export default class Header extends Component {
         if (document.querySelector('.mobile-menu').classList.contains('active')) {
             document.querySelector('.nav__burger').firstElementChild.classList.remove('active');
             document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('body').style.overflow = 'unset';
+
         } else {
+            document.querySelector('.header').classList.remove('smaller');
             document.querySelector('.nav__burger').firstElementChild.classList.add('active');
             document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('body').style.overflow = 'hidden' ;
+
+        }
+    };
+    disableBurgerMenu = ()=>{
+        if (document.querySelector('.mobile-menu')) {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.nav__burger').firstElementChild.classList.remove('active');
+            document.querySelector('body').style.overflow = 'unset';
         }
     };
     handleScroll = () => {
         const {prevScrollPos} = this.state;
         const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollPos > currentScrollPos;
+        let visible = null;
+        if(!document.querySelector('.mobile-menu').classList.contains('active')){
+            visible = prevScrollPos > currentScrollPos;
+        }else{
+            visible = true;
+        }
+
         this.setState({
             prevScrollPos: currentScrollPos,
             visible
@@ -58,25 +78,26 @@ export default class Header extends Component {
                         <div className="menu">
                             <ul className="menu__ul">
                                 <li className="menu__item">
-                                    <a className="menu__item--link">Start</a>
+                                    <Link spy={true} smooth={true} to='start' className="menu__item--link">Start</Link>
                                 </li>
                                 <li className="menu__item">
-                                    <a className="menu__item--link">About</a>
+                                    <Link  spy={true} smooth={true} to='about' className="menu__item--link">About</Link>
                                 </li>
                                 <li className="menu__item">
-                                    <a className="menu__item--link">Projects</a>
+                                    <Link spy={true} smooth={true} to='projects' className="menu__item--link">Projects</Link>
                                 </li>
                                 <li className="menu__item">
-                                    <a className="menu__item--link">Contact</a>
+                                    <Link spy={true} smooth={true} to='contact' className="menu__item--link">Contact</Link>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
                     <div className="nav__container nav__container--socials">
-                        <a target="_blank" href='https://github.com/JRzankowski'>
+                        <a target="_blank"  rel="noopener noreferrer" href='https://github.com/JRzankowski'>
                             <IoLogoGithub/>
                         </a>
-                        <a target="_blank"
+                        <a target="_blank"  rel="noopener noreferrer"
                            href='https://www.linkedin.com/in/j%C4%99drzej-rzankowski-58508b194/'>
                             <IoLogoLinkedin/>
                         </a>
@@ -87,22 +108,22 @@ export default class Header extends Component {
                         <nav className='sidebar__nav'>
                             <ul className="sidebar__ul">
                                 <li className="sidebar__item">
-                                    <a className='sidebar__item--link'>Start</a>
+                                    <Link onClick={this.disableBurgerMenu()} spy={true} smooth={true} to='start' className='sidebar__item--link'>Start</Link>
                                 </li>
                                 <li className="sidebar__item">
-                                    <a className='sidebar__item--link'>About</a>
+                                    <Link onClick={this.disableBurgerMenu()} spy={true} smooth={true} to='about' className='sidebar__item--link'>About</Link>
                                 </li>
                                 <li className="sidebar__item">
-                                    <a className='sidebar__item--link'>Work</a>
+                                    <Link onClick={this.disableBurgerMenu()} spy={true} smooth={true} to='projects' className='sidebar__item--link'>Work</Link>
                                 </li>
                                 <li className="sidebar__item">
-                                    <a className='sidebar__item--link'>Contact</a>
+                                    <Link onClick={this.disableBurgerMenu()} spy={true} smooth={true} to='contact' className='sidebar__item--link'>Contact</Link>
                                 </li>
                                 <li className="sidebar__item sidebar__socials">
-                                    <a target="_blank" href='https://github.com/JRzankowski'>
+                                    <a target="_blank"  rel="noopener noreferrer" href='https://github.com/JRzankowski'>
                                         <IoLogoGithub/>
                                     </a>
-                                    <a target="_blank"
+                                    <a target="_blank"  rel="noopener noreferrer"
                                        href='https://www.linkedin.com/in/j%C4%99drzej-rzankowski-58508b194/'>
                                         <IoLogoLinkedin/>
                                     </a>

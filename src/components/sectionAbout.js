@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import myPhoto from '../assets/photo.png'
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 
 export default class SectionAbout extends Component {
     render() {
         return (
-            <section className="about">
+            <section id='about' className="about">
                 <h3 className="about__heading">
                     About Me
                 </h3>
@@ -29,11 +31,12 @@ export default class SectionAbout extends Component {
                         </div>
                     </div>
                     <div className="about__photo">
+                        <Fade top cascade distance={"100px"}  >
                         <a className="photo__link" target="_blank" href='https://github.com/JRzankowski'>
                             <img src={myPhoto} className='img' alt='My photo'/>
 
                         </a>
-
+                        </Fade>
                     </div>
                 </div>
 
