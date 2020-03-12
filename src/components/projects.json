@@ -1,31 +1,31 @@
 {
   "projects": [
     {
-      "photo": "projectPhoto",
+      "photo": "gerenqPhoto",
       "name": "GerenQ",
       "status": "in progress",
-      "description": "An educational application that is intended to be a learning aid in the form of a quiz for students. The user gets access to a database of many subjects, sections and questions.",
+      "description": "An educational application that is intended to be a learning aid in the form of a quiz for students. The user gets access to a database of many subjects, sections and questions.The project is under development",
       "technologies": [
         "React",
         "Scss",
-        "TypeScript",
-        "Firebase (hosting and database)"
+        "Trivia API (for this moment)",
+        "Firebase (hosting)"
       ],
-      "github" : "",
-      "live": ""
+      "github" : "https://github.com/JRzankowski/gerenq",
+      "live": "https://gerenq-cfc83.web.app/"
     },
     {
-      "photo": "projectPhoto",
+      "photo": "odwrPhoto",
       "name": "Oddam w dobre ręce",
       "status": "done",
       "description": "This is a website made as part of the Coders Lab course. The site is used to create a place where everyone can give unused items to trusted institutions. After logging in, we have access to a form which is to allow users to return items. If you do not want to register - login: test@text.com, password: testpassword.",
       "technologies": [
         "React",
         "Scss",
-        "Firebase (hosting)"
+        "Firebase (hosting and authentication)"
       ],
-      "github" : "",
-      "live": ""
+      "github" : "https://github.com/JRzankowski/cl-portfoliolab",
+      "live": "https://cl-portfoliolab.web.app/"
     },
     {
       "photo": "weatherAppPhoto",
@@ -41,7 +41,7 @@
       "live": "https://weather-app-f3383.firebaseapp.com/#/"
     },
     {
-      "photo": "projectPhoto",
+      "photo": "chessReact",
       "name": "react-chess",
       "status": "in progress",
       "description": "My first big project in React. An application that is to allow a chess game with the computer (chess engine). Currently, I prefer to focus on other things, but I will definitely finish it in the future.",
@@ -49,8 +49,7 @@
         "React",
         "Scss"
       ],
-      "github" : "",
-      "live": ""
+      "github": "https://github.com/JRzankowski/react-chess"
     }
   ]
 }

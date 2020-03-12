@@ -2,16 +2,24 @@ import React, {Component} from 'react';
 import {GoMarkGithub, GoBrowser} from 'react-icons/go'
 import Fade from 'react-reveal/Fade';
 import weatherAppPhoto from '../assets/weather-app-min.png'
-import projectPhoto from '../assets/gerenq-pw.png'
+import odwrPhoto from '../assets/odwr-min.png'
+import gerenqPhoto from '../assets/gerenq-min.png'
+import chessReact from '../assets/chess-react-min.png'
+
 export default class SectionWorkProject extends Component {
 
     render() {
         let photo = '';
-        if(this.props.photo === 'weatherAppPhoto'){
-            photo = weatherAppPhoto
-        }else{
-            photo = projectPhoto
+        if (this.props.photo === 'weatherAppPhoto') {
+            photo = weatherAppPhoto;
+        } else if (this.props.photo === 'odwrPhoto') {
+            photo = odwrPhoto;
+        } else if (this.props.photo === 'gerenqPhoto') {
+            photo = gerenqPhoto;
+        } else {
+            photo = chessReact
         }
+        console.log(this.props.live)
         return (
             <Fade bottom>
                 <div className="work__container">
@@ -27,7 +35,7 @@ export default class SectionWorkProject extends Component {
                                 </p>
                             </div>
                             <ul className="project-box__technologies">
-                                {this.props.technologies.map((value,index)=>{
+                                {this.props.technologies.map((value, index) => {
                                     return <li key={index} className="project-box__technologies--item">{value}</li>
                                 })}
                             </ul>
@@ -35,9 +43,11 @@ export default class SectionWorkProject extends Component {
                                 <a className="project-box__links--link" href={this.props.github}>
                                     <GoMarkGithub/>
                                 </a>
-                                <a className="project-box__links--link" href={this.props.live}>
-                                    <GoBrowser/>
-                                </a>
+                                {this.props.live === undefined ? null :
+                                    <a className="project-box__links--link" href={this.props.live}>
+                                        <GoBrowser/>
+                                    </a>}
+
                             </div>
                         </div>
                         <div className="project-box__img" style={{'backgroundImage': `url(${photo})`}}>

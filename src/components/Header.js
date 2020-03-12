@@ -89,7 +89,6 @@ export default class Header extends Component {
                                 <li className="menu__item">
                                     <Link spy={true} smooth={true} to='contact' className="menu__item--link">Contact</Link>
                                 </li>
-
                             </ul>
                         </div>
                     </div>

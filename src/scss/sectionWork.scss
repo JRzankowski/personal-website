@@ -3,11 +3,35 @@
   margin: 100px auto 0;
   padding: 150px 0;
 
+  .work__text{
+    margin: 0 auto;
+    text-align: center;
+    color: $color-font-base;
+    font-weight: 500;
+    font-size: 1.3rem;
+    &--link{
+      color: $color-font-base;
+      position: relative;
+      top: 6px;
+      left: 4px;
+      font-size: 1.7rem;
+      cursor: pointer;
+      transition: .1s;
+      &:hover{
+        color: $color-font-highlighted;
+      }
+    }
+  }
 
   &__heading {
     @include section-heading(before);
   }
-
+&__container:nth-of-type(1){
+  .project-box__img{
+    background-position: left;
+    background-size: cover;
+  }
+}
   &__container:nth-of-type(2n) {
     .project-box {
       &__container {
@@ -78,6 +102,7 @@
         display: none;
         width: 50%;
         background-color: #414141;
+
         @media(min-width: 600px) {
           background-size: cover;
           background-position: center;

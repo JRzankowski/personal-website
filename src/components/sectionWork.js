@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import SectionWorkProject from "./sectionWorkProject";
 import projectsData from "./projects"
-import weatherAppPhoto from '../assets/weather-app-min.png'
-import projectPhoto from '../assets/gerenq-pw.png'
+import {GoMarkGithub, GoBrowser} from 'react-icons/go'
 export default class SectionWork extends Component {
     render() {
         return (
@@ -23,8 +22,10 @@ export default class SectionWork extends Component {
                         />
                     })
                 }
+                <p className='work__text'>
+                    ... and more on my <a target="_blank"  rel="noopener noreferrer" href='https://github.com/JRzankowski' className='work__text--link'><GoMarkGithub/></a>
+                </p>
             </section>
-
         );
     }
 }
