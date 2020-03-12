@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import myPhoto from '../assets/photo.png'
-import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 
 

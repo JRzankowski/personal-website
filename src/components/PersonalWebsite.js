@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Fade from 'react-reveal/Fade';
 import Header from "./Header";
 import SectionStart from "./sectionStart";
 import SectionAbout from "./sectionAbout";

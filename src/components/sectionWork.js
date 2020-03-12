@@ -19,6 +19,7 @@ export default class SectionWork extends Component {
                                                    github={value.github}
                                                    live={value.live}
                                                    key={index}
+                                                   status={value.status}
                         />
                     })
                 }
