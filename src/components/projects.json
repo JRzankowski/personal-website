@@ -1,6 +1,34 @@
 {
   "projects": [
     {
+      "photo": "shopping-cart",
+      "name": "shopping-cart",
+      "status": "in progress",
+      "description": "My first attempt to understand Redux. A simple online store. The site is under production.",
+      "technologies": [
+        "React",
+        "Redux",
+        "styled-components",
+        "Netlify (hosting)"
+      ],
+      "github": "https://github.com/JRzankowski/react-shopping-cart",
+      "live": "https://5eb566a13eca3bd44bdd38d5--jshop.netlify.app/"
+    },
+    {
+      "photo": "dorfin",
+      "name": "dorfin",
+      "status": "in progress",
+      "description": "A static website created for a tax consultancy company. This is also my first site created in Gatsby.",
+      "technologies": [
+        "Gatsby.js",
+        "GraphQL",
+        "styled-components",
+        "Netlify (hosting)"
+      ],
+      "github": "https://github.com/JRzankowski/dorfin-gatsby",
+      "live": "https://dorfin.netlify.app/"
+    },
+    {
       "photo": "gerenqPhoto",
       "name": "GerenQ",
       "status": "in progress",
@@ -51,5 +79,6 @@
       ],
       "github": "https://github.com/JRzankowski/react-chess"
     }
+
   ]
 }

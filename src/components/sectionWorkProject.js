@@ -5,6 +5,8 @@ import weatherAppPhoto from '../assets/weather-app-min.png'
 import odwrPhoto from '../assets/odwr-min.png'
 import gerenqPhoto from '../assets/gerenq-min.png'
 import chessReact from '../assets/chess-react-min.png'
+import shoppingCart from '../assets/shoppingCart.png'
+import dorfin from '../assets/dorfin.png'
 
 export default class SectionWorkProject extends Component {
 
@@ -16,7 +18,12 @@ export default class SectionWorkProject extends Component {
             photo = odwrPhoto;
         } else if (this.props.photo === 'gerenqPhoto') {
             photo = gerenqPhoto;
-        } else {
+        }else if(this.props.photo === 'shopping-cart'){
+            photo = shoppingCart
+        }else if(this.props.photo ==='dorfin'){
+            photo = dorfin
+        }
+        else {
             photo = chessReact
         }
         return (
@@ -39,11 +46,11 @@ export default class SectionWorkProject extends Component {
                                 })}
                             </ul>
                             <div className="project-box__links">
-                                <a className="project-box__links--link" href={this.props.github}>
+                                <a target="_blank"  className="project-box__links--link" href={this.props.github}>
                                     <GoMarkGithub/>
                                 </a>
                                 {this.props.live === undefined ? null :
-                                    <a className="project-box__links--link" href={this.props.live}>
+                                    <a target="_blank"  className="project-box__links--link" href={this.props.live}>
                                         <GoBrowser/>
                                     </a>}
 

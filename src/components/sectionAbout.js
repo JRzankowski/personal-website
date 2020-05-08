@@ -25,7 +25,9 @@ export default class SectionAbout extends Component {
                                 <li className="content__skills-skill">HTML & (S)CSS</li>
                                 <li className="content__skills-skill">JavaScirpt (ES6+)</li>
                                 <li className="content__skills-skill">React</li>
-                                <li className="content__skills-skill">Basics of TypeScript</li>
+                                <li className="content__skills-skill">Redux</li>
+                                <li className="content__skills-skill">styled-components</li>
+                                <li className="content__skills-skill">Gatsby.js</li>
                             </ul>
                         </div>
                     </div>

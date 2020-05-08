@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import SectionWorkProject from "./sectionWorkProject";
 import projectsData from "./projects"
-import {GoMarkGithub, GoBrowser} from 'react-icons/go'
+import {GoMarkGithub} from 'react-icons/go'
 export default class SectionWork extends Component {
     render() {
         return (
