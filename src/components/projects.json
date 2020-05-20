@@ -4,7 +4,7 @@
       "photo": "shopping-cart",
       "name": "shopping-cart",
       "status": "in progress",
-      "description": "My first attempt to understand Redux. A simple online store. The site is under production.",
+      "description": "My first attempt to understand Redux. A simple online store. Promocode: jshopDelivery.",
       "technologies": [
         "React",
         "Redux",
